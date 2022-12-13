@@ -1,0 +1,25 @@
+.statusToDo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875rem;;
+}
+
+.tasksCreated{
+    font-weight: bold;
+    color: var(--blue)
+}
+
+.tasksCompleted{
+    font-weight: bold;
+    color: var(--purple)
+}
+
+.tasksCreated span, .tasksCompleted span{
+    color: var(--gray-200);
+    padding: 0.125rem 0.5rem;
+    background-color: var(--gray-400);
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    text-align: center;
+}
