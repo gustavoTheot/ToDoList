@@ -42,15 +42,21 @@
     background-color: var(--purple-dark);
     border-radius: 100%;
     opacity: 0;
+
+    text-decoration: line-through;
 }
 
 .boxTask input:checked:before{
     opacity: 1;
 }
 
-
 .boxTask p{
-    color: var(--gray-100)
+    color: var(--gray-100);
+}
+
+.boxTask input:checked + p{
+    color: var(--gray-300);
+    text-decoration: line-through;
 }
 
 .buttonDelete{

@@ -4,6 +4,9 @@ import { AddTask } from "./AddTask";
 import { StatusTasks } from "./StatusTasks"
 import { Task } from "./Task"
 
+import  clipboard from "../assets/clipboard.svg";
+import styles from './TaskBoard.module.css'
+
 interface StatusProps{
     id: string;
     isComplited: boolean;
@@ -56,6 +59,15 @@ export function TaskBoard(){
                 countComplitedTask={tasksComplited.length}
             />
             {
+                tasks.length === 0 ? 
+                    <div className={styles.dontHaveTasks}>
+                        <img src={clipboard} alt="clipboard" />
+                        <div className={styles.about}>
+                            <strong>Você ainda não tem tarefas cadastradas</strong>
+                            <p>Crie tarefas e organize seus itens a fazer</p>
+                        </div>
+                        
+                     </div> :
                 tasks.map((task) => {
                     return(
                         <li style={{ listStyleType: 'none'}} key={task.id}>
